@@ -10,9 +10,9 @@ services:
     ports:
       - "3306:3306"
     env_file:
-      - db.env
+      - ./db.env
     volumes:
-      - /Users/ljh/Docume/nts/springStudy/mysql/mysql:/var/lib/mysql
+      - ${MYSQL_DATA_PATH}:/var/lib/mysql
 
   app:
     build: .
